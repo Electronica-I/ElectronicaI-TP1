@@ -1,0 +1,19 @@
+* E:\OperaDownload\2019B\Electronica I\ElectronicaI-TP1\Simulacion.asc
+C1 Vi P001 1µ
+R1 Vi 0 2.7Meg
+R2 N001 Vi 4.7Meg
+R3 Vo 0 560
+C2 Vo N002 1µ
+J1 N001 Vi N002 MPF102
+V1 Vs 0 SINE(0 1 1K) AC 1
+R4 N002 0 330
+R5 P001 Vs 1k
+V2 N001 0 15
+R6 N003 Vo 1
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\BZeroL\Documents\LTspiceXVII\lib\cmp\standard.jft
+.model MPF102   NJF(Beta=1.04m Betatce=-.5 Rd=1 Rs=1 Lambda=2m Vto=-3.41 Vtotc=-2.5m Is=33.57f Isr=322.4f N=1 Nr=2 Xti=3 Alpha=311.7u Vk=243.6 Cgd=1.6p M=.3622 Pb=1 Fc=.5 Cgs=2.414p Kf=11.73E-18 Af=1)
+.ac dec 1000 1 10meg
+.backanno
+.end
